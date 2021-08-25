@@ -9,9 +9,7 @@
 }
 
 body {
-    min-height: 100vh;
     text-align: center;
-    width: 100%;
 }
 
 canvas {
@@ -52,7 +50,6 @@ canvas {
 
 #container {
     margin: auto;
-    margin-top: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
