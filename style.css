@@ -10,7 +10,7 @@
 
 body {
     text-align: center;
-    background: url('background.jpg');
+    background: url('background1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -61,12 +61,9 @@ canvas {
 h1 {
     font-size: 5rem;
     text-shadow: 2px 2px 4px grey;
-    color: rgb(9, 255, 112);
 }
 
 h3 {
-    color: rgb(9, 255, 112);
-    font-weight: 800;
     font-size: 2rem;
 }
 
