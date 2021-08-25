@@ -1,0 +1,23 @@
+#video {
+    border: 1px solid #999;
+    width: 100%;
+    max-width: 860px;
+    background-color: black;
+}
+
+#vidStore {
+    width: 100%;
+    max-width: 860px;
+}
+
+body {
+    min-height: 100vh;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
