@@ -57,7 +57,7 @@ stopBtn.addEventListener('click', () => {
             let blob = new Blob(data, { 'type': 'video/mp4' })
             data = [];
             let videoURL = window.URL.createObjectURL(blob);
-            console.log(videoURL);
+
             storeVid.src = videoURL;
         }
     });
@@ -65,7 +65,6 @@ stopBtn.addEventListener('click', () => {
 ssBtn.addEventListener('click', () => {
     ssContext.drawImage(video, 0, 0, ss.width, ss.height);
     const imageURL = ss.toDataURL('image/png');
-    console.log(imageURL);
     let link = document.createElement('a');
     link.href = imageURL;
     let fileName = prompt('Enter image name')
