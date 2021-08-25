@@ -11,6 +11,7 @@
 body {
     min-height: 100vh;
     text-align: center;
+    width: 100%;
 }
 
 canvas {
@@ -51,10 +52,15 @@ canvas {
 
 #container {
     margin: auto;
-    margin-top: 20vh;
+    margin-top: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+h1 {
+    font-size: 5rem;
+    text-shadow: 2px 2px 4px grey;
 }
 
 @media only screen and (max-width:1000px) {
@@ -62,5 +68,23 @@ canvas {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    #video,
+    #vidStore {
+        width: 90%;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    #buttons>button {
+        margin: 5px;
+    }
+    #start,
+    #stop,
+    #screenShot {
+        padding: 5px 10px;
     }
 }
