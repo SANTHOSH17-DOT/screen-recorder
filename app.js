@@ -1,8 +1,10 @@
 const video = document.querySelector('#video');
 const startBtn = document.querySelector('#start');
 const stopBtn = document.querySelector('#stop')
+stopBtn.disabled = true;
 const storeVid = document.querySelector('#vidStore');
 const ssBtn = document.querySelector('#screenShot');
+ssBtn.disabled = true;
 const ss = document.querySelector('canvas');
 var ssContext = ss.getContext('2d');
 ss.width = 400;
@@ -27,7 +29,10 @@ const displayMediaOptions = {
     audio: false
 }
 startBtn.addEventListener('click', () => {
-
+    stopBtn.disabled = false;
+    ssBtn.disabled = false;
+    ssBtn.style.cursor = 'pointer'
+    stopBtn.style.cursor = 'pointer'
     startCapt().then(() => {
         mediaRecorder.start()
         mediaRecorder.ondataavailable = (e) => {
@@ -40,7 +45,10 @@ startBtn.addEventListener('click', () => {
     })
 })
 stopBtn.addEventListener('click', () => {
-
+    stopBtn.disabled = true;
+    ssBtn.disabled = true;
+    ssBtn.style.cursor = 'auto'
+    stopBtn.style.cursor = 'auto'
     stopCapt().then(() => {
         mediaRecorder.stop()
         mediaRecorder.onstop = (e) => {
